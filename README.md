@@ -2,9 +2,9 @@
 Tu dojo personal para dominar el arte de la programación
 
 <img src="https://img.shields.io/badge/React-18.2.0-%252361DAFB?logo=react">
-https://img.shields.io/badge/JavaScript-ES6%252B-%2523F7DF1E?logo=javascript
-https://img.shields.io/badge/Vite-4.0-%2523646CFF?logo=vite
-https://img.shields.io/badge/License-MIT-green.svg
+<img src="https://img.shields.io/badge/JavaScript-ES6%252B-%2523F7DF1E?logo=javascript">
+<img src="https://img.shields.io/badge/Vite-4.0-%2523646CFF?logo=vite">
+<img src="https://img.shields.io/badge/License-MIT-green.svg">
 
 ¿Alguna vez te has enfrentado a codear y el código te ganó la batalla? ¿Estás cansado de que los bugs te asedien? ¿De que el compilador diga que tienes un error en la línea 27, pero al revisar... en la línea 27 no hay nada escrito💀?
 
