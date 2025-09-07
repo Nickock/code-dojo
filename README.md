@@ -1,7 +1,7 @@
 🥋 CodeDojo
 Tu dojo personal para dominar el arte de la programación
 
-https://img.shields.io/badge/React-18.2.0-%252361DAFB?logo=react
+<img src="https://img.shields.io/badge/React-18.2.0-%252361DAFB?logo=react">
 https://img.shields.io/badge/JavaScript-ES6%252B-%2523F7DF1E?logo=javascript
 https://img.shields.io/badge/Vite-4.0-%2523646CFF?logo=vite
 https://img.shields.io/badge/License-MIT-green.svg
