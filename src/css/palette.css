@@ -1,0 +1,34 @@
+/*DARK THEME PALETTE*/
+body{ 
+--font-color : white;
+--font-color-inverted : black;
+--light-blue : rgb(8, 80, 128);
+--blue : rgb(5, 41, 65);
+--dark-blue : rgb(1, 5, 20);
+--dark-green : rgb(0, 91, 82);
+--darker-green : rgb(3, 32, 29);
+--green : rgb(159, 192, 49);
+--lime : rgb(159, 192, 49);
+--orange : #f28705;
+--red : #f23030;
+--dark-red : #881818;
+--light-yellow : #d5d58d;
+}
+/*LIGHT THEME PALETTE*/
+
+.light-theme{ 
+--font-color : black;
+--font-color-inverted : white;
+--light-blue :#ffa5ae;
+--blue : #fad6be;
+--dark-blue : #fefaeb; 
+--dark-green : #ffa5ae;
+--darker-green : #a06168;
+--green :  #78569c;
+--lime : rgb(159, 192, 49);
+--orange : #f28705;
+--red : #f23030;
+--dark-red : #881818;
+--light-yellow : #1d153c;
+
+}
