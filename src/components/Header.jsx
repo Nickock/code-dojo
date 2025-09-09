@@ -1,6 +1,7 @@
 import { BsFillMoonStarsFill ,BsFillSunFill  } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import logo from '../assets/logo.png';
+// import logo from '../assets/logo_webp.webp';
+import logo from '../assets/logo_v2.png';
 import { useState } from "react";
 export function Header(){
     const [theme,setTheme] = useState(false);
@@ -10,7 +11,7 @@ export function Header(){
         setTheme(!theme);
     }
     return(
-    <header className="header">
+    <header className="main-header">
         <nav>
             {/* <Link to="/">Home</Link>
             <Link to="/cosa">Cosa</Link>

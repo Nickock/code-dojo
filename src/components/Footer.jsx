@@ -2,7 +2,7 @@ import { BsGithub } from "react-icons/bs";
 import { FaDev } from "react-icons/fa";
 export function Footer(){
     return(
-        <footer>
+        <footer className="main-footer">
             <a href=""><FaDev/></a>
             <a href=""><BsGithub/></a>
             

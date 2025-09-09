@@ -1,0 +1,124 @@
+.tu-container{
+    background-color: var(--white-transparent);
+    margin: auto;
+    border-radius: 20px;
+    max-width: 1000px;
+    /* padding: 20px 50px; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+}
+
+.tu-header{
+    margin: 0;
+    padding: 5px;
+    background-color: var(--light-blue);
+    text-align: center;
+}
+
+.tu-description{
+    padding: 20px 50px;
+}
+
+.tu-topic-description{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.tu-topic>header>h2{
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    color: var(--green);
+    border-bottom: 4px solid var(--green);
+}
+
+.tu-topic-subTitle{
+    width: 100%;
+    color: var(--aqua);
+    /* text-shadow: black; */
+}
+.tu-topic-paragraph{
+    width: 95%;
+}
+.tu-topic-code-example{
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    font-family: 'Fira Code', monospace;
+    width: 100%;
+}
+.tu-topic-code-example>p>span{
+    color: #8d8d8d;
+    margin-right: 10px;
+}
+.tu-topic-list{
+    width: 100%;
+    /* font-size: 1.2em; */
+    font-weight: bold;
+}
+.tu-topic-image{
+    max-width: 250px;
+    max-height: 250px;
+}
+.tu-topic-image-large{
+    max-width: 500px;
+    /* max-height: 250px; */
+}
+.tu-topic-card{
+    background-color: var(--light-blue);
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 250px;
+    border-left: 5px solid var(--green);
+    /* align-self: center; */
+    box-shadow:  0px 0px 8px 0px rgba(0,0,0,.3);
+    margin:  20px 0px;
+}
+
+.tu-topic-card:hover{
+    transform: scale(1.2);
+    cursor: crosshair;
+}
+.tu-topic-card>strong{
+    font-size: 1.2em;
+}
+
+
+
+.tu-goCode{
+    box-sizing: border-box;
+    margin: 30px auto;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    background-color: var(--light-blue);
+    color: var(--green);
+    border-radius: 30px;
+    border: 3px solid var(--green);
+    cursor: pointer;
+    text-decoration: none;
+    transition-duration: 200ms;
+}
+.tu-footer{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: var(--light-blue);
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.tu-goCode:hover{
+    background-color: var(--dark-green);
+    color: var(--blue);
+    border: 3px solid var(--blue);
+
+}
+

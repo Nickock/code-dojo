@@ -13,7 +13,7 @@ body{
 }
 
 
-.header{
+.main-header{
     position: relative;
     width: 100%;
     margin: 0;
@@ -36,7 +36,7 @@ body{
     font-size: 1.1em;
     cursor: pointer;
 }
-.header>nav{
+.main-header>nav{
     /* background-color: brown; */
     margin: 0;
     display: flex;
@@ -45,7 +45,7 @@ body{
     gap: 50px;
     justify-content: center;
 }
-.header>nav>a{
+.main-header>nav>a{
     margin: 0;
     /* background-color: red; */
     padding: 10px;
@@ -53,7 +53,7 @@ body{
     text-decoration: none;
     font-size: 1em;
 }
-.header>nav>a>img{
+.main-header>nav>a>img{
     width: 50px;
     height: 50px;
     margin: 0;
@@ -64,7 +64,7 @@ body{
 }
 
 
-footer{
+.main-footer{
     background:var(--dark-green);
     background: linear-gradient(90deg, var(--darker-green) 0%, var(--dark-green) 50%, var(--darker-green) 100%);
 
@@ -76,10 +76,10 @@ footer{
     gap: 50px;
     font-size: 3em;
 }
-footer>a{
+.main-footer>a{
     color: var(--light-yellow);
     transition-duration: 100ms;
 }
-footer>a:hover{
+.main-footer>a:hover{
     transform: scale(1.5);
 }
