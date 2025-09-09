@@ -25,9 +25,9 @@ export function TestCard({number,status,input,output,exceptedOutput}){
             <div className={`sv-test-preview ${state}`}>
                <p>Input : {input}</p>
             </div>
-            <span className={`sv-test-preview , sv-test-preview-out  ${state}`}> 
-               <p>Actual output : {exceptedOutput}</p>
-               <p>Excepted output : {output}</p>
+            <span className={`sv-test-preview sv-test-preview-out  ${state}`}> 
+               <p className={(output == exceptedOutput)?"":"sv-test-actualOutput-bad"}>Actual output : {output}</p>
+               <p>Excepted output : {exceptedOutput}</p>
             </span>
          </summary>
     </>)

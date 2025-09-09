@@ -47,11 +47,10 @@
     backdrop-filter: blur(3px);
 }
 .ex-card>img{
-    height: 100px;
-    width: 100px;
-    /* background-color: red; */
-    margin: 0;
+    max-width: 80%;
+    aspect-ratio: 1;
 }
+
 .ex-card:hover{
     transform: scale(1.12) skew(-3deg);
     color: var(--blue);
@@ -116,6 +115,7 @@
     grid-column: span 2;
     grid-row: span 1;
 }
+
 .ex-card:nth-child(4n),
 .ex-card:nth-child(5n){    
     flex-direction: column;
@@ -198,10 +198,39 @@
 .sv-description-example{
     background-color: var(--darker-green);
     /* color: #ccc; */
-    padding: 10px 25px;
+    padding: 0px 25px;
+    margin: 15px auto;
     border: 2px dashed var(--light-yellow);
     border-radius: 15px;
 }
+.sv-description-code-example{
+    background-color: #2d2d2d;
+    padding: 1px 20px;
+    color: #f8f8f2;
+    /* line-height: 8px; */
+    /* line-height: 1em; */
+    padding: 5px;
+}
+.sv-description-code-example>div{
+    display: flex;
+    align-items: center;
+}
+
+.sv-description-code-example>div>span{
+    align-self: flex-start;
+}
+
+.sv-description-code-example>div>p{
+    margin: 0;
+}
+
+
+.sv-description-code-example span{
+    color:#8d8d8d;
+    margin-right: 10px;
+
+}
+
 .sv-description img{
     /* border-radius: 15px; */
     width: 100%;
@@ -323,23 +352,21 @@
 }
 
 .sv-test-preview{
-    /* background-color: var(--blue); */
-    background-color: #202020;
+    background-color: var(--bg-code);
     color: var(--light-yellow);
     padding: 10px;
     border: 1px dashed white;
     border-radius: 13px;
-    /* font-size: 12px; */
     font-weight: normal;
     text-align: left;
 }
-.sv-test-preview-out>p:nth-child(1){
+.sv-test-preview-out{
     color: var(--green);
 }
-.sv-test-preview-out>p:nth-child(2){
+
+.sv-test-actualOutput-bad{
     color: var(--red);
 }
-
 .sv-test:hover{
     background-color: #272727;
     color: #b9b9b9;

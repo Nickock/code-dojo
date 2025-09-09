@@ -17,6 +17,7 @@ body{
 /* --ultra-blue : #014ba0;
 --sky-blue : #2a7fe0; */
 --aqua : #48e4f0;
+--bg-code : #202020;
 }
 /*LIGHT THEME PALETTE*/
 
@@ -28,7 +29,6 @@ body{
 --dark-blue : #fefaeb; 
 --dark-green : #ffa5ae;
 --darker-green : #a06168;
-/* --green :  #78569c; */
 --green :  #583083;
 --lime : rgb(159, 192, 49);
 --orange : #f28705;
@@ -37,5 +37,6 @@ body{
 --light-yellow : #1d153c;
 --white-transparent : rgba(0,0,0,.1);
 --aqua : rgb(54, 0, 54);
+--bg-code : #b38686;
 
 }

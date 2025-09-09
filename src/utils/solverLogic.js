@@ -22,7 +22,7 @@ export async function Solver(code,exercise){
 		//Compara el resultado esperado contra el obtenido
 		let testResult = (JSON.stringify(solutionResult) === JSON.stringify(test.result));
 
-		//agrega un log por test  
+
 		logs.push({
 			input : test.arguments,
 			output : solutionResult,

@@ -30,14 +30,16 @@ return(
             {!colapsed?<BsArrowBarRight/>:<BsArrowBarLeft />}
         </div>
         {!isError && excerciseData.tests.map((t,index)=>{
+
             let testStatus = (logs.length>0 && logs[index].status)?"ok":"bad";
+
             return <TestCard key={index}
                 number={index} 
                 status={logs.length>0&&testStatus}
-                input={Object.keys(t.arguments).map(key=>`${key} = ${t.arguments[key]}`).join()}
-                output={t.result.toString()} 
-                exceptedOutput={logs.length>0 && logs[0].output?logs[index].output.toString():'_'
-                }/>
+                input={Object.keys(t.arguments).map(key=>`${key} = ${JSON.stringify(t.arguments[key])}`).join()}
+                exceptedOutput={JSON.stringify(t.result)} 
+                output={logs.length>0 && logs[0].output?JSON.stringify(logs[index].output):'_'}
+                />
         }
         )}
        {!isError && (excerciseData.hints && excerciseData.hints.length>0) &&
