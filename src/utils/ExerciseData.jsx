@@ -238,7 +238,7 @@ export const ExerciseData = [
                 [ParagraphType.NORMAL,`La recursión es una herramienta muy versátil y potente. Permite crear soluciones a un problema, a partir de soluciones de instancias más pequeñas del mismo problema.`],
                 [ParagraphType.NORMAL,`Un ejemplo de aplicación es la sucesión de Fibonacci. Esta sucesión cumple una propiedad particular y es que un término cualquiera de la sucesión está definido en función de términos anteriores a este. Su definición es la siguiente:`],
                 [ParagraphType.CODE_EXAMPLE,{lines:[
-                    `Fibo(0) = 1`,
+                    `Fibo(0) = 0`,
                     `Fibo(1) = 1 `,
                     `Fibo(n) = Fibo(n-1) + Fibo(n-2) para n >= 2`,
                 ]}],
@@ -252,21 +252,41 @@ export const ExerciseData = [
                 [ParagraphType.EXAMPLE,'Fibo(1) = Fibo(0) + Fibo(-1)'],
                 [ParagraphType.NORMAL,' y esta sucesión está definida únicamente en los números naturales, por lo que Fibo(-1) no tiene sentido. Por eso, definimos: Fibo(0) = 1 y Fibo(1) = 1'],
                 [ParagraphType.NORMAL,'A estas definiciones se les llaman "casos base", en cambio, Fibo(n) = Fibo(n-1) + Fibo(n-2) es llamado "paso recursivo".'],
-                [ParagraphType.NORMAL,'Con esta información, construye la definición para Fibo(n), recuerda sumar todas las sub-soluciones y retornar un valor natural'],
+                [ParagraphType.NORMAL,'Con esta información, implmenta la función Fibo(n), puedes asumir como precondición que n es un numero natural'],
             ]
         },
         data:{
-            signature : "Nombre funcion",
-            initialCode : "function fibo(n){\n//Escribe tu codigo aquí \n\n return 0;}",
+            signature : "fibo",
+            // initialCode : "function fibo(n){\n//Escribe tu codigo aquí \n\n return 0;}",
+            initialCode : `function fibo(n){
+	if(n<2){
+		return n;
+	}else{
+		return fibo(n-1)+fibo(n-2);
+	}
+}`,
             arguments : ["n"],
             tests : [
-                {arguments : {"n":0},result :1},
+                {arguments : {"n":0},result :0},
                 {arguments : {"n":1},result :1},
+                {arguments : {"n":5},result :5},
+                {arguments : {"n":8},result :21},
+                {arguments : {"n":7},result :13},
+                {arguments : {"n":2},result :1},
                 ],
             hints : [
                 "Pista 1",
                 "Piasta 2",
-                ]
+                ],
+            solution : [
+                ["function fibo(n){",0],
+                ["if(n<2){",1],
+                ["return n;",2],
+                ["}else{",1],
+                ["return fibo(n-1)+fibo(n-2);",2],
+                ["}",1],
+                ["}",0]
+            ]
         }
     },
     {
@@ -326,6 +346,11 @@ const ejTemplate = {
             hints : [
                 "Pista 1",
                 "Piasta 2",
-                ]
+                ],
+            solution : [
+                //['lineaCoridgo', numeroIndent]
+                ["linea codigo solucion del ejercicio",0],
+                ["linea codigo solucion del ejercicio",0],
+            ]
         }
     };

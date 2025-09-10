@@ -1,10 +1,9 @@
 export async function Solver(code,exercise){
 
     const codeArguments = exercise.arguments.join();
-	const codeBody = code.split(`function ${exercise.signature}(${codeArguments})`)[1];
+	// const codeBody = code.split(`function ${exercise.signature}(${codeArguments})`)[1];
+	const codeBody = `${code} return ${exercise.signature}(${codeArguments})`;
 	const solution = new Function(codeArguments,codeBody); 
-
-	// solution;
 
 	let logs = [];
 	
@@ -15,7 +14,7 @@ export async function Solver(code,exercise){
 			Object.keys(test.arguments).map(key=>JSON.stringify(test.arguments[key])).join(",")
 		})`
 		// console.log(evalExpresion)
-		
+
 		//obtiene el resultado de la evaluación
 		let solutionResult = eval(evalExpresion);
 

@@ -289,17 +289,13 @@
     margin-top: 150px;
 }
 .sv-console-hint{
-    /* color: var(--light-blue); */
     background-color: rgb(5, 41, 65);
     padding: 7px;
     color: white;
     border-radius: 15px;
-    /* border: rgb(8, 80, 128) 3px solid; */
     width: 80%;
-    margin: 20px auto ;
+    margin: 20px auto;
     cursor: pointer;
-
-
 }
 .sv-console-hint:hover{
     /* border-color: var(--blue); */
@@ -308,6 +304,90 @@
 .sv-console-hint>span{
     font-size: 20px;
 }
+
+
+
+.sv-console-solution{
+    position: fixed;
+    display: grid;
+    place-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6; /*<.minimap de monaco editor esta en z-index:5*/
+    background-color: rgba(0,0,0,.75);
+    backdrop-filter: blur(10px);
+}
+.sv-console-solution-show-btn{
+    position: relative;
+    background-color: #8a0e0e;
+    padding: 7px;
+    color: white;
+    border-radius: 15px;
+    /* width: 80%; */
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.sv-console-solution-code{
+    background-color: #2d2d2d;
+    color: white;
+    padding: 50px 50px 50px 25px;
+    border-radius: 15px;
+    font-size: 1.4em;
+}
+.sv-console-solution-code>div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sv-console-solution-code>div:nth-child(1){
+    color: #608b4e;
+}
+.sv-console-solution-code p{
+    margin: 0;
+}
+.sv-console-solution-code span{
+    color:#8d8d8d;
+}
+
+.sv-console-solution-closeBtn{
+    position: fixed;
+    font-size: 50px;
+    width: 60px;
+    height: 60px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    color: #ffdf88;
+}
+
+.sv-console-confirmDialog{
+    background-color: var(--dark-green);
+    color:var(--font-color);
+    border-radius: 15px;
+    padding: 20px 50px;
+    gap: 20px;
+    font-size: 1.5em;
+}
+.sv-console-confirmDialog-btns{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+.sv-console-confirmDialog-btns>div{
+    background-color: rgb(10, 116, 10);
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid rgb(27, 27, 27);
+}
+.sv-console-confirmDialog-btns>div:nth-child(1){
+    background-color: rgb(160, 24, 24);
+}
+
 
 
 

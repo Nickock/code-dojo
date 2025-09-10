@@ -44,7 +44,6 @@ const editorRef = useRef(null);
           defaultValue={initialCode}
           theme ="vs-dark"
           height={'90%'}
-          automaticLayout = {false}
           onMount={handleEditorDidMount}
           />
         <button onClick={runCode} className={isRunningCode?"sv-disabled":""} >RUN CODE</button>
