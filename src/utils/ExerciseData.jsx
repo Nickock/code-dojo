@@ -257,14 +257,7 @@ export const ExerciseData = [
         },
         data:{
             signature : "fibo",
-            // initialCode : "function fibo(n){\n//Escribe tu codigo aquí \n\n return 0;}",
-            initialCode : `function fibo(n){
-	if(n<2){
-		return n;
-	}else{
-		return fibo(n-1)+fibo(n-2);
-	}
-}`,
+            initialCode : "function fibo(n){\n//Escribe tu codigo aquí \n\nreturn 0;\n\n}",
             arguments : ["n"],
             tests : [
                 {arguments : {"n":0},result :0},
@@ -274,10 +267,10 @@ export const ExerciseData = [
                 {arguments : {"n":7},result :13},
                 {arguments : {"n":2},result :1},
                 ],
-            hints : [
-                "Pista 1",
-                "Piasta 2",
-                ],
+            // hints : [
+            //     "Pista 1",
+            //     "Piasta 2",
+            //     ],
             solution : [
                 ["function fibo(n){",0],
                 ["if(n<2){",1],

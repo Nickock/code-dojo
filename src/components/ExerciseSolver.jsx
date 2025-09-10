@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { BsFillMoonStarsFill ,BsFillSunFill  } from "react-icons/bs";
 import { Editor } from "@monaco-editor/react"
 import { ExerciseConsole } from './ExerciseConsole';
 import { ExerciseDescripion } from './ExersiseDescription';
@@ -12,10 +13,15 @@ const initialCode = `//Asegurate de definir tu solución dentro de la función y
 const [isRunningCode , setIsRunningCode] = useState(false);
 const [solverLogs, setSolverLogs] = useState([])
 const [solverError, setSolverError] = useState(false)
+const [editorTheme, setEditorTheme] = useState('vs-dark')
 
 const editorRef = useRef(null);
   function handleEditorDidMount(editor) {
     editorRef.current = editor;
+  }
+
+  const toggleEditorTheme = ()=>{
+    setEditorTheme(editorTheme==='vs-dark'?'light':'vs-dark')
   }
 
   async function runCode() {
@@ -39,10 +45,16 @@ const editorRef = useRef(null);
       <ExerciseDescripion title={exercise.card.title} paragraphs={exercise.card.description} />
     
       <section className="sv-editor">
+        
+        <div className="sv-editor-toggleTheme" onClick={toggleEditorTheme}>
+          Editor:{(editorTheme=='vs-dark')?<BsFillMoonStarsFill/>:<BsFillSunFill/>}
+        </div>
+        
         <Editor
           defaultLanguage="javascript"
           defaultValue={initialCode}
-          theme ="vs-dark"
+          // theme ="vs-dark"
+          theme = {editorTheme}
           height={'90%'}
           onMount={handleEditorDidMount}
           />
@@ -50,7 +62,10 @@ const editorRef = useRef(null);
       </section>
 
       <ExerciseConsole excerciseData={exercise.data} logs={solverLogs} isError={solverError}/>
-
+    
+    
+    
+    
   </main>
 );
  
