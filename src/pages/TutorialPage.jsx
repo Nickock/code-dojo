@@ -1,15 +1,18 @@
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { NotFound } from "../components/NotFound";
 import '../css/Tutorial.css'
 import { ExerciseData ,ParagraphType } from "../utils/ExerciseData";
 
 export function TutorialPage(){
 
     const {id} = useParams();
-    const TutorialData = ExerciseData.find(category=>category.exercises.find(ex=>ex.id==id)!= null).exercises[0];
+    try{
+
     
+    const TutorialData = ExerciseData.find(category=>category.exercises.find(ex=>ex.id==id)!= null).exercises[0];
+
     return(
-        <>
         <section className="tu-container">
             <header className="tu-header">
                 <h1>{TutorialData.title}</h1>
@@ -48,6 +51,8 @@ export function TutorialPage(){
                 <Link to='/desafios' className="tu-goCode">¡Elige tu desafío!</Link>
             </footer>
         </section>
-        </>
     )
+    }catch{
+        return <NotFound/>
+    }
 }

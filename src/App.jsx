@@ -7,6 +7,7 @@ import { CodePage } from './pages/CodePage';
 import { TutorialPage } from './pages/TutorialPage'
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import { useEffect , useState} from 'react';
+import { NotFound } from './components/NotFound';
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
         <Route path="/desafios" element={<ExcercisePage/>}/>
         <Route path="/code/:id" element={<CodePage/>}/>
         <Route path="/tutorial/:id" element={<TutorialPage/>}/>
-        <Route path="*" element={<h2>404</h2>}></Route>
+        <Route path="*" element={<NotFound/>}></Route>
       </Routes>
       <div className="mouseTracker" style={{top:mousePosition.y-mouseTrackerSize/2, left:mousePosition.x-mouseTrackerSize/2,height:mouseTrackerSize,width:mouseTrackerSize}}/>
       <Footer/>

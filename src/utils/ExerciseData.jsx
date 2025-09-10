@@ -186,7 +186,17 @@ export const ExerciseData = [
             hints : [
                 "Que un grafo sea dirigido, significa que para cualquier par de nodos se cumple que : se transitar desde A hasta B si y solo si se puede transitar desde B hasta A.",
                 "Un grafo es dirigido, si su matriz de adyacencia es simétrica.",
-                ]
+                ],
+            solution: [
+                ["function esDirigido(G){",0],
+                ["for(let i = 0 ; i<G.length;i++){",1],
+                ["for(let j = 0 ; j<i ; j++){",2],
+                ["if(G[i][j] != G[j][i]) return false;",3],
+                ["}",2],
+                ["}",1],
+                ["return true;",0],
+                ["}",0],
+            ]
         }
     },
     {
@@ -225,8 +235,8 @@ export const ExerciseData = [
             hints : ["Esta es una pista tipica , corta sencilla y poco util", "esta es la segunda pista, mas inutil aun"]
         }
     },
-  
-
+    
+   
     {
         id:3,
         card:{
