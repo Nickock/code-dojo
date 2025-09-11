@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { NotFound } from "../components/NotFound";
+import { CodeExample } from "../components/CodeExample";
 import '../css/Tutorial.css'
 import { ExerciseData ,ParagraphType } from "../utils/ExerciseData";
 
@@ -9,8 +10,13 @@ export function TutorialPage(){
     const {id} = useParams();
     try{
 
-    
-    const TutorialData = ExerciseData.find(category=>category.exercises.find(ex=>ex.id==id)!= null).exercises[0];
+        // const TutorialData = ExerciseData.find(category=>
+        //     category.exercises.some(ex=>ex.id==id)
+        // ).exercises.find(ex=>ex.id==id)
+
+    const TutorialData = ExerciseData.flatMap(categoria => categoria.exercises)
+                  .find(data => data.id === id);
+
 
     return(
         <section className="tu-container">
@@ -28,9 +34,7 @@ export function TutorialPage(){
                             switch(p[0]){
                                 case ParagraphType.NORMAL : return <p className="tu-topic-paragraph" key={index}>{p[1]}</p>; 
                                 case ParagraphType.SUBTITLE : return <h3 className="tu-topic-subTitle" key={index}>{p[1]}</h3>; 
-                                case ParagraphType.CODE_EXAMPLE : return <div className="tu-topic-code-example"key={index}>{
-                                    p[1].map((line,line_index)=><p key={`ex_${index}_line_${line_index}`}><span>{line_index} </span>{line}</p>)
-                                }</div>; 
+                                case ParagraphType.CODE_EXAMPLE : return <CodeExample key={`code-example-${index}`} lines={p[1]}/>; 
                                 case ParagraphType.LIST : return <ul className="tu-topic-list"key={index}>{
                                     p[1].map((line,line_index)=><li key={`ex_${index}_li_${line_index}`}>{line}</li>)
                                 }</ul>; 

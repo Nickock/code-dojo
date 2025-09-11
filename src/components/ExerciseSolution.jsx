@@ -1,7 +1,6 @@
 import { BsBack, BsXCircle }from "react-icons/bs"
 import { useState } from "react";
-// import { Editor } from "@monaco-editor/react"
-
+import { CodeExample } from "./CodeExample";
 
 export function ExerciseSolution({exerciseSolution,close}){
     
@@ -14,14 +13,7 @@ export function ExerciseSolution({exerciseSolution,close}){
             <div className="sv-console-solution-closeBtn" onClick={close}><BsXCircle/></div>
             {isShowingSolution?
             <article className="sv-console-solution-code">
-                <div key={0}><span>{0}</span><p>{'//Posible solución'}</p>
-                </div>
-               {exerciseSolution.map((line,index)=>
-               <div key={index+1}>
-                    <span>{index+1}</span>
-                    <p style={{"marginLeft": `${20*line[1]}px`}}>{line[0]}</p>
-                </div>
-               )}
+               <CodeExample lines={exerciseSolution}/>
             </article>
             :
             <div className="sv-console-confirmDialog">

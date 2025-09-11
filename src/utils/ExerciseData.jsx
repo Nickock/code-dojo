@@ -19,6 +19,7 @@ export const ExerciseData = [
 {
     category:ExerciseCategory.GRAPHS ,
     exercises:[
+    //Tutorial 0 Conceptos basicos
     {
         id:`grafos`,
         isTutorial : true,
@@ -56,8 +57,6 @@ export const ExerciseData = [
                     [ParagraphType.CARD,'Camino','Secuencia de aristas que conectan dos nodos.Ejemplo: A → B → C → D es un camino de A a D'],
                     [ParagraphType.CARD,'Grafo Conexo','Un grafo es conexo cuando existe un camino entre cualquier par de nodos.'],
                     [ParagraphType.CARD,'Componente Conexa','Subsección máxima del grafo que es conexa. Ejemplo: Un grafo con 3 islas desconectadas tiene 3 componentes conexas'],
-                    // [ParagraphType.IMAGE , "src/assets/graphs/ex_img_1.png"],
-                    // [ParagraphType.IMAGE , "src/assets/graphs/ex_img_1.png"],
                     [ParagraphType.IMAGE_LARGE , "/src/assets/graphs/tutorial/basics_1.png"],
 
                     
@@ -69,39 +68,39 @@ export const ExerciseData = [
                     [ParagraphType.SUBTITLE,'1. Matriz de Adyacencia'],
                     [ParagraphType.NORMAL,'Array bidimensional donde matriz[i][j] = true si existe arista de i a j.'],
                     [ParagraphType.CODE_EXAMPLE,[
-                        "// Grafo con 4 nodos: 0, 1, 2, 3",                            
-                        "const matrizAdyacencia = [",                            
-                        "[false, true,  true,  false ],",                            
-                        "[true,  false, false, true ],",                            
-                        "[false, false, false, true],",                        
-                        "[true, false, false, false] ",                        
-                        "];",
-                        "//Ver figura 1 "                        
+                        ["// Grafo con 4 nodos: 0, 1, 2, 3",0],                            
+                        ["const matrizAdyacencia = [",0],                            
+                        ["[false, true,  true,  false ],",1],                            
+                        ["[true,  false, false, true ],",1],                            
+                        ["[false, false, false, true],",1],                        
+                        ["[true, false, false, false] ",1],                        
+                        ["];",0],
+                        ["//Ver figura 1 ",0],                        
                     ]],
                     [ParagraphType.IMAGE_LARGE , "/src/assets/graphs/tutorial/figure_1.png"],
                     [ParagraphType.SUBTITLE,'2. Lista de Adyacencia'],
                     [ParagraphType.NORMAL,'Array de listas donde lista[i] contiene los nodos adyacentes a i.'],
                     [ParagraphType.CODE_EXAMPLE,[
-                        "// Mismo grafo en lista de adyacencia",                            
-                        "const listaAdyacencia = [",                            
-                        "[1, 2],",                            
-                        "[0,3],",                            
-                        "[3],",                        
-                        "[0] ",                        
-                        "];",
-                        "//Ver figura 1 "                        
+                        ["// Mismo grafo en lista de adyacencia",0],                            
+                        ["const listaAdyacencia = [",0],                            
+                        ["[1, 2],",1],                            
+                        ["[0,3],",1],                            
+                        ["[3],",1],                        
+                        ["[0] ",1],                        
+                        ["];",0],
+                        ["//Ver figura 1",0],                        
                     ]],
                     
                     [ParagraphType.NORMAL,"Notar que el ejemplo anterior es un grafo dirigido, se modifica el mismo para transformarlo en no dirigido"],
                     
                     [ParagraphType.CODE_EXAMPLE,[
-                        "const listaAdyacencia_2 = [",                            
-                        "[1, 2,3],",                            
-                        "[0,3],",                            
-                        "[0,3],",                        
-                        "[0,1,2] ",                        
-                        "];",
-                        "//Ver figura 2 "                        
+                        ["const listaAdyacencia_2 = [",0],                            
+                        ["[1, 2,3],",1],                            
+                        ["[0,3],",1],                            
+                        ["[0,3],",1],                        
+                        ["[0,1,2] ",1],                        
+                        ["];",0],
+                        ["//Ver figura 2",0],                        
                     ]],
                     [ParagraphType.IMAGE_LARGE , "/src/assets/graphs/tutorial/figure_2.png"],
                     
@@ -134,7 +133,9 @@ export const ExerciseData = [
             },
         ]
     },
-        {
+
+    //EsDirigido?
+    {
         id:1,
         card:{
             title:"¿Es dirigido?",
@@ -148,14 +149,14 @@ export const ExerciseData = [
                     aunque si recuerda que representó cada grafo utilizando una matriz de adyacencia.`],
                 [ParagraphType.NORMAL,`Tu tarea es implementar la funcion "esDirigido(G)", que retorna un booleano que indica si el grafo G es dirigido o no.`],
                 [ParagraphType.EXAMPLE,`G tiene n nodos, donde n = G.lenght, que a su vez cumple n = G[i].length para todo i=0 ... n-1.`],
-                [ParagraphType.CODE_EXAMPLE,{lines:[
-                    `//Ejemplo:`,
-                    `const G = [`,
-                    `[false,true,false]`,
-                    `[true,false,true]`,
-                    `[false,true,false]`,
-                    `]`,
-                ]}],
+                [ParagraphType.CODE_EXAMPLE,[
+                    ['//Ejemplo:',0],
+                    ['const G = [',0],
+                    ['[false,true,false]',1],
+                    ['[true,false,true]',1],
+                    ['[false,true,false]',1],
+                    [']',0],
+                ]],
                 [ParagraphType.NORMAL,`En el ejemplo , G es un grafo dirigido , la respuesta esperada es true.`],
                 [ParagraphType.NORMAL,`Además, G no tiene lazos (arista que conecta un nodo consigo mismo),y esta condición es cierta para todos los grafos en este desafío.`],
                 
@@ -199,44 +200,7 @@ export const ExerciseData = [
             ]
         }
     },
-    {
-        id:2,
-        card:{
-            title:"¿Es conexo?",
-            image :"src/assets/graphs/ex_img_1.png",
-            dificulty:"easy",
-            catgory : ExerciseCategory.GRAPHS,
-            description:[
-                [ParagraphType.NORMAL,`En este desafío nos asignan la tarea de determinar si un grafo es conexo o no.`],
-                [ParagraphType.NORMAL,`Decimos que un grafo es conexo, si existe al menos un camino entre dos nodos distintos cualesquiera`],
-                [ParagraphType.NORMAL,`Los grafos son representados mediante listas de adyacencia, y son recibidas como un parámetro de nombre G.`],
-                [ParagraphType.EXAMPLE,`G tiene n nodos, donde n = G.lenght`],
-                [ParagraphType.CODE_EXAMPLE,{lines:[
-                    `//Ejemplo:`,
-                    `const G = [ [1] , [0] ]`,
-                ]}],
-                [ParagraphType.NORMAL,`En el ejemplo , es un grafo que contiene dos nodos, 0 y 1. Como G[0] = [1] , significa que los nodos adyacentes a 0 son [1] y los adyacentes a  1 son G[1] = [1].`],
-                [ParagraphType.NORMAL,`Este ejemplo es un nodo conexo, por lo que la respuesta esperada es true`],
-                
-            ]
-        },
-        data:{
-            signature : "esConexo",
-            initialCode : "function esConexo(G){\n//Tu codigo aquí!\n\n}",
-            arguments : ["G"],
-            tests : [
-                {arguments : {"G":[[]]},result :true},
-                {arguments : {"G":[[],[]]},result :false},
-                {arguments : {"G":[[1],[0]]},result :true},
-                {arguments : {"G":[[1,2],[0,2],[0,1]]},result :true},
-                {arguments : {"G":[[1,2],[0,2],[0,1,6],[4,6],[3],[6],[2,3,5]]},result :true},
-                {arguments : {"G":[[1,2],[0,2],[0,1,6],[4,6],[3],[],[2,3]]},result :false},
-                ],
-            hints : ["Esta es una pista tipica , corta sencilla y poco util", "esta es la segunda pista, mas inutil aun"]
-        }
-    },
-    
-   
+    //Recursión, repaso
     {
         id:3,
         card:{
@@ -247,11 +211,11 @@ export const ExerciseData = [
             description:[
                 [ParagraphType.NORMAL,`La recursión es una herramienta muy versátil y potente. Permite crear soluciones a un problema, a partir de soluciones de instancias más pequeñas del mismo problema.`],
                 [ParagraphType.NORMAL,`Un ejemplo de aplicación es la sucesión de Fibonacci. Esta sucesión cumple una propiedad particular y es que un término cualquiera de la sucesión está definido en función de términos anteriores a este. Su definición es la siguiente:`],
-                [ParagraphType.CODE_EXAMPLE,{lines:[
-                    `Fibo(0) = 0`,
-                    `Fibo(1) = 1 `,
-                    `Fibo(n) = Fibo(n-1) + Fibo(n-2) para n >= 2`,
-                ]}],
+                [ParagraphType.CODE_EXAMPLE,[
+                    ['Fibo(0) = 0',0],
+                    ['Fibo(1) = 1 ',0],
+                    ['Fibo(n) = Fibo(n-1) + Fibo(n-2) para n >= 2',0],
+                ]],
                 [ParagraphType.NORMAL,`Supongamos que queremos el término número 3. Aplicando la definición, tenemos que:`],
                 [ParagraphType.EXAMPLE,`Fibo(3) = Fibo(3-1) + Fibo(3-2) = Fibo(2) + Fibo(1)`],
                 [ParagraphType.NORMAL,`Aquí es donde la recursión juega su papel, pues para calcular Fibo(3), nos basamos en la solución de una instancia menor del mismo problema. En este caso, esas soluciones serían Fibo(2) y Fibo(1).`],
@@ -292,6 +256,178 @@ export const ExerciseData = [
             ]
         }
     },
+    //Tutorial 1 RecorridaEnGrafos
+    {
+        id:`recorridaEnGrafos`,
+        isTutorial : true,
+        title : "Recorrida sobre grafos",
+        subTitle: "Como recorrer grafos y su implementación",
+        cardImage: 'src/assets/graphs/ex_img_1.png',
+        topics : [
+            /*Topico*/{
+                title: "Introducción",
+                description : [
+                    [ParagraphType.NORMAL , `Haz aprendido la estructura que rige los grafos, pero ¿cómo accedemos a su información?`],
+                    [ParagraphType.NORMAL , `Existen dos maneras de recorrer un grafo, recorrida en profundidad 'DFS' y recorrida en amplitud 'BFS'. Ambas recorridas tienen sus particularidades por lo que no hay una que sea mejor que la otra, lo importante es entender las bases para así poder aplicar una u otra en función de nuestras necesidades`],
+                    [ParagraphType.NORMAL , `Cabe recalcar que asumieremos que los grafos son NO dirigidos, pero los conceptos son igual de aplicables a grafos dirigidos`],
+                    // [ParagraphType.CARD ,"Titulo tarjeta" ,"Tarjeta de topico 1 Tarjeta de topico 1 Tarjeta de topico 1 "],
+                ],
+            },
+            /*Topico*/{
+                title: "Recorrida en profundidad",
+                description : [
+                    [ParagraphType.SUBTITLE,'Síntesis'],
+                    [ParagraphType.NORMAL , "La recorrida en profundidad se basa en tomar una rama del grafo, explorarla lo máximo posible, y una vez no se pueda avanzar más por esa rama, tomar la siguiente rama sin explorar. Esto se repite hasta haber explorado todo el grafo, aunque para ser precisos, hasta haber explorado toda la componente conexa"],
+                    [ParagraphType.NORMAL, 'Para ganar intuición sobre el algoritmo, supongamos que somos un viajante que se encuentra situado en un nodo cualquiera del grafo. Nuestro siguiente paso, es decidir hacia que nodo viajar, dentro de nuestras posibilidades, tenemos unicamente aquellos nodos que son adyacentes al nodo en el que estamos situados. Una vez elegido el nodo destino, viajamos hasta él.'],
+                    [ParagraphType.NORMAL, '¿Que sigue? pues elegir un nuevo nodo hacia el cual viajar, pero ten cuidado!, si vuelves a elegir el mismo nodo desde el que partiste, podrías quedar atrapado en un bucle infinito, viajando desde el nodo inical hasta otro nodo y viceversa. Entonces, ¿Qué podemos hacer para evitar reelegir nodos ya visitados? ... fácil!, cada vez que visitemos un nodo, lo marcaremos como visitado, así, a la hora de elegir un nuevo nodo para visitar, dentro de las posibilidades, solo tomaremos en cuenta aquellas que aún no fueron visitadas.'],
+                    [ParagraphType.NORMAL , "Para el algoritmo, nos serviremos de una lista auxiliar a la que llamaremos 'explorado'. Inicialmente, definiremos explorado[v]=false para todo nodo v del grafo, y actualizaremos a 'explorado[v]=true' cuando exploremos el nodo v."],
+                    [ParagraphType.NORMAL , 'Bien, repetiremos este proceso todo lo que se pueda, pero ¿qué hacer cuando se llegue a un nodo, tal que no tenga nodos adyacentes excepto el nodo desde el cual llegamos a él?.'],
+                    [ParagraphType.NORMAL , '¿Recuerdas que solo tomamos una opción por nodo para visitar?, pues ¡es hora de ver las otras opciones!. Volveremos sobre nuestros pasos hasta encontrar un nodo tal que exista un nodo adyacente a él y que aún que no fue explorado, y partiremos nuestro nuevo camino desde allí.'],
+                    [ParagraphType.SUBTITLE , "Algoritmo"],
+                    [ParagraphType.NORMAL, 'Por la naturaleza del razonamiento, vamos a implementar el algoritmo de manera recursiva :'],
+                    [ParagraphType.CODE_EXAMPLE,[
+                        ["linea",0],
+                        ["linea",1],
+                        ["linea",2],
+                        
+                    ]],
+                ],
+            },
+            /*Topico*/{
+                title: "Tipos de aristas",
+                description : [
+                    [ParagraphType.CARD,'No dirigidas','Conexión bidireccional (como una carretera de doble sentido)'],
+                    [ParagraphType.CARD,'Dirigidas','Conexión unidireccional (como una calle de un solo sentido)'],
+                ],
+            },
+            /*Topico*/{
+                title: "Algunos términos",
+                description : [
+                    
+                    [ParagraphType.CARD,'Camino','Secuencia de aristas que conectan dos nodos.Ejemplo: A → B → C → D es un camino de A a D'],
+                    [ParagraphType.CARD,'Grafo Conexo','Un grafo es conexo cuando existe un camino entre cualquier par de nodos.'],
+                    [ParagraphType.CARD,'Componente Conexa','Subsección máxima del grafo que es conexa. Ejemplo: Un grafo con 3 islas desconectadas tiene 3 componentes conexas'],
+                    // [ParagraphType.IMAGE , "src/assets/graphs/ex_img_1.png"],
+                    // [ParagraphType.IMAGE , "src/assets/graphs/ex_img_1.png"],
+                    [ParagraphType.IMAGE_LARGE , "/src/assets/graphs/tutorial/DFS.gif"],
+
+                    
+                ],
+            },
+            /*Topico*/{
+                title: "Representación de grafos",
+                description : [
+                    [ParagraphType.SUBTITLE,'1. Matriz de Adyacencia'],
+                    [ParagraphType.NORMAL,'Array bidimensional donde matriz[i][j] = true si existe arista de i a j.'],
+                    [ParagraphType.CODE_EXAMPLE,[
+                        ["// Grafo con 4 nodos: 0, 1, 2, 3",0],                            
+                        ["const matrizAdyacencia = [",0],                            
+                        ["[false, true,  true,  false ],", 0],                           
+                        ["[true,  false, false, true ],",0],                            
+                        ["[false, false, false, true],", 0],                       
+                        ["[true, false, false, false] ", 0],                       
+                        ["];",0],
+                        ["//Ver figura 1 ",0],                     
+                    ]],
+                    [ParagraphType.IMAGE_LARGE , "/src/assets/graphs/tutorial/figure_1.png"],
+                    [ParagraphType.SUBTITLE,'2. Lista de Adyacencia'],
+                    [ParagraphType.NORMAL,'Array de listas donde lista[i] contiene los nodos adyacentes a i.'],
+                    [ParagraphType.CODE_EXAMPLE,[
+                        ["// Mismo grafo en lista de adyacencia",0],                            
+                        ["const listaAdyacencia = [",0],                            
+                        ["[1, 2],",0],                            
+                        ["[0,3],",0],                            
+                        ["[3],",0],                        
+                        ["[0] ",0],                        
+                        ["];",0],
+                        ["//Ver figura 1 ",0],                      
+                    ]],
+                    
+                    [ParagraphType.NORMAL,"Notar que el ejemplo anterior es un grafo dirigido, se modifica el mismo para transformarlo en no dirigido"],
+                    
+                    [ParagraphType.CODE_EXAMPLE,[
+                        ["const listaAdyacencia_2 = [",0],                            
+                        ["[1, 2,3],",0],                            
+                        ["[0,3],",0],                            
+                        ["[0,3],",0],                        
+                        ["[0,1,2] ",0],                        
+                        ["];",0],
+                        ["//Ver figura 2 ",0],                        
+                    ]],
+                    [ParagraphType.IMAGE_LARGE , "/src/assets/graphs/tutorial/figure_2.png"],
+                    
+                ],
+            },
+            /*Topico*/{
+                title: "Aplicaciones prácticas",
+                description : [
+                    
+                    [ParagraphType.CARD,'Red social','Podemos modelar las personas como nodos, las aristas como relaciones de amistad (no dirigidas). Un grupo de amigos sería una componente conexa.'],
+                    [ParagraphType.CARD,'Sistema de Vuelos','Modelamos los aereopuertos como los nodos, y los viajes disponibles como las aristas (aristas dirigidas, pues puede existir un viaje de A hasta B pero no de B a A).'],
+                   
+                ],
+            },
+
+             /*Topico*/{
+                title: "¿Que más podrás practicar?",
+                description : [
+                    [ParagraphType.LIST,[
+                        'Formas de recorrida de grafos DFS, BFS',
+                        'Ciclos',
+                        'Grafos bipartitos',
+                        'Grafos ponderados',
+                        'Caminos de menor costo Dijkstra',
+                        '¿Qué es un árbol?',
+                        'Árboles de recubrimiento de costo minimo',
+                        'Y mucho más ...',
+                    ]],
+                ],
+            },
+        ]
+    },
+
+    //EsConexo?
+    {
+        id:2,
+        card:{
+            title:"¿Es conexo?",
+            image :"src/assets/graphs/ex_img_1.png",
+            dificulty:"easy",
+            catgory : ExerciseCategory.GRAPHS,
+            description:[
+                [ParagraphType.NORMAL,`En este desafío nos asignan la tarea de determinar si un grafo es conexo o no.`],
+                [ParagraphType.NORMAL,`Decimos que un grafo es conexo, si existe al menos un camino entre dos nodos distintos cualesquiera`],
+                [ParagraphType.NORMAL,`Los grafos son representados mediante listas de adyacencia, y son recibidas como un parámetro de nombre G.`],
+                [ParagraphType.EXAMPLE,`G tiene n nodos, donde n = G.lenght`],
+                [ParagraphType.CODE_EXAMPLE,[
+                    [`//Ejemplo:`,0],
+                    [`const G = [ [1] , [0] ]`,0],
+                ]],
+                [ParagraphType.NORMAL,`En el ejemplo , es un grafo que contiene dos nodos, 0 y 1. Como G[0] = [1] , significa que los nodos adyacentes a 0 son [1] y los adyacentes a  1 son G[1] = [1].`],
+                [ParagraphType.NORMAL,`Este ejemplo es un nodo conexo, por lo que la respuesta esperada es true`],
+                
+            ]
+        },
+        data:{
+            signature : "esConexo",
+            initialCode : "function esConexo(G){\n//Tu codigo aquí!\n\n}",
+            arguments : ["G"],
+            tests : [
+                {arguments : {"G":[[]]},result :true},
+                {arguments : {"G":[[],[]]},result :false},
+                {arguments : {"G":[[1],[0]]},result :true},
+                {arguments : {"G":[[1,2],[0,2],[0,1]]},result :true},
+                {arguments : {"G":[[1,2],[0,2],[0,1,6],[4,6],[3],[6],[2,3,5]]},result :true},
+                {arguments : {"G":[[1,2],[0,2],[0,1,6],[4,6],[3],[],[2,3]]},result :false},
+                ],
+            hints : ["Esta es una pista tipica , corta sencilla y poco util", "esta es la segunda pista, mas inutil aun"]
+        }
+    },
+
+    
+
+    
+
     {
         id:4,
         card:{
@@ -302,6 +438,7 @@ export const ExerciseData = [
         },
         data:{}
     },
+
     {
         id:5,
         card:{
@@ -330,10 +467,11 @@ const ejTemplate = {
             description:[
                 [ParagraphType.NORMAL,`ParrafoNormal`],
                 [ParagraphType.EXAMPLE,`Parrafo destacado`],
-                [ParagraphType.CODE_EXAMPLE,{lines:[
-                    `linea`,
-                    `linea`,
-                ]}],
+                [ParagraphType.CODE_EXAMPLE,[
+                    //linea, index
+                    [`linea`,0],
+                    [`linea`,0],
+                ]],
                 [ParagraphType.IMAGE,`URL IMAGE`],
                 
             ]
