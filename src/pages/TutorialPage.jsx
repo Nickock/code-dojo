@@ -35,6 +35,7 @@ export function TutorialPage(){
                                 case ParagraphType.NORMAL : return <p className="tu-topic-paragraph" key={index}>{p[1]}</p>; 
                                 case ParagraphType.SUBTITLE : return <h3 className="tu-topic-subTitle" key={index}>{p[1]}</h3>; 
                                 case ParagraphType.CODE_EXAMPLE : return <CodeExample key={`code-example-${index}`} lines={p[1]}/>; 
+                                case ParagraphType.EXAMPLE : return <div className="sv-description-example" key={`tu-example${index}`}>{p[1]}</div>; 
                                 case ParagraphType.LIST : return <ul className="tu-topic-list"key={index}>{
                                     p[1].map((line,line_index)=><li key={`ex_${index}_li_${line_index}`}>{line}</li>)
                                 }</ul>; 
@@ -51,8 +52,8 @@ export function TutorialPage(){
                 })}
             </div>
             <footer className="tu-footer">
-                <p><strong>¿Listo para comenzar?</strong> ¡Tu primer desafío te espera! 💪</p>
-                <Link to='/desafios' className="tu-goCode">¡Elige tu desafío!</Link>
+                <p>{TutorialData.footer[0]}</p>
+                <Link to={TutorialData.footer[1]} className="tu-goCode">¡Manos a la obra!</Link>
             </footer>
         </section>
     )

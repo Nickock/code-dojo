@@ -198,7 +198,7 @@
 .sv-description-example{
     background-color: var(--darker-green);
     /* color: #ccc; */
-    padding: 0px 25px;
+    padding: 15px 25px;
     margin: 15px auto;
     border: 2px dashed var(--light-yellow);
     border-radius: 15px;
@@ -227,33 +227,6 @@
     margin-left: 10px;
 }
 
-/*
-.sv-description-code-example{
-    background-color: #2d2d2d;
-    padding: 1px 20px;
-    color: #f8f8f2;
-    padding: 5px;
-}
-.sv-description-code-example>div{
-    display: flex;
-    align-items: center;
-}
-
-.sv-description-code-example>div>span{
-    align-self: flex-start;
-}
-
-.sv-description-code-example>div>p{
-    margin: 0;
-}
-
-
-.sv-description-code-example span{
-    color:#8d8d8d;
-    margin-right: 10px;
-
-}
-*/
 
 .sv-description img{
     /* border-radius: 15px; */

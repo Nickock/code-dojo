@@ -22,7 +22,7 @@ export function ExerciseDescripion({title,paragraphs}){
          {paragraphs && paragraphs.map((ph,index) => {
             switch(ph[0]){
                case ParagraphType.NORMAL : return <p key={index}>{ph[1]}</p>
-               case ParagraphType.EXAMPLE:return <div className="sv-description-example" key={index}><p>{ph[1]}</p></div>
+               case ParagraphType.EXAMPLE:return <div className="sv-description-example" key={index}>{ph[1]}</div>
                // case ParagraphType.CODE_EXAMPLE:return <div className="sv-description-code-example" key={index}>
                //       {ph[1].lines.map((line,line_index)=>{return <div key={`ex-code-line-${index}-${line_index}`}><span>{line_index} </span> <p>{line}</p></div>})}
                //    </div>
