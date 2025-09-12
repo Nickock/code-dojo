@@ -62,6 +62,7 @@
 .tu-topic-list{
     width: 100%;
     /* font-size: 1.2em; */
+    margin: 0;
     font-weight: bold;
 }
 .tu-topic-image{
