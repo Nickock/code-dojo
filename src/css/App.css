@@ -207,6 +207,7 @@
 
 
 .code-example-box{
+    box-sizing: border-box;
     width: 100%;
     background-color: #2d2d2d;
     padding: 1px 20px;
@@ -216,6 +217,10 @@
 .code-example-line{
     display: flex;
     align-items: center;
+    cursor:text;
+}
+.code-example-line:hover{
+    background-color: #3a3a3a;
 }
 .code-example-line>span{
     color:#8d8d8d;

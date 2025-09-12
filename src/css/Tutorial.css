@@ -43,7 +43,7 @@
 .tu-topic-paragraph{
     width: 95%;
 }
-.tu-topic-code-example{
+/* .tu-topic-code-example{
     background: #2d2d2d;
     color: #f8f8f2;
     padding: 1.5rem;
@@ -58,7 +58,8 @@
 .tu-topic-code-example>p>span{
     color: #8d8d8d;
     margin-right: 10px;
-}
+} */
+
 .tu-topic-list{
     width: 100%;
     /* font-size: 1.2em; */
@@ -70,8 +71,7 @@
     max-height: 250px;
 }
 .tu-topic-image-large{
-    max-width: 500px;
-    /* max-height: 250px; */
+    max-width: min(100% ,500px);
 }
 .tu-topic-card{
     background-color: var(--light-blue);

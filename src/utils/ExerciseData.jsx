@@ -23,7 +23,7 @@ export const ExerciseData = [
     {
         id:`grafos`,
         isTutorial : true,
-        title : " Introducción a los Grafos",
+        title : " Introducción a Grafos",
         subTitle: "Aprende los conceptos fundamentales de las estructuras de grafos",
         cardImage: 'src/assets/graphs/ex_img_6.png',
         topics : [
@@ -126,7 +126,7 @@ export const ExerciseData = [
                         'Grafos ponderados',
                         'Caminos de menor costo Dijkstra',
                         '¿Qué es un árbol?',
-                        'Árboles de recubrimiento de costo minimo',
+                        'Árboles recubridores de costo minimo',
                         'Y mucho más ...',
                     ]],
                 ],
