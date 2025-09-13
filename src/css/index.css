@@ -1,5 +1,12 @@
 @import url("./palette.css");
 
+#root{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: space-between;
+}
 
 body{
     background: var(--background);
@@ -18,7 +25,7 @@ body{
     width: 100%;
     margin: 0;
     height: 70px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     font-size: 1.25em;
     background:var(--dark-green);
     background: linear-gradient(90deg, var(--darker-green) 0%, var(--dark-green) 50%, var(--darker-green) 100%);
@@ -69,14 +76,14 @@ body{
 .main-footer{
     background:var(--dark-green);
     background: linear-gradient(90deg, var(--darker-green) 0%, var(--dark-green) 50%, var(--darker-green) 100%);
-
     height: 150px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     display: flex;
     place-items: center;
     place-content: center;
     gap: 50px;
     font-size: 3em;
+    position: relative;
 }
 .main-footer>a{
     color: var(--light-yellow);

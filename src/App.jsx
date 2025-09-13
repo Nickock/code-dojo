@@ -5,6 +5,7 @@ import { HomePage } from './pages/homePage';
 import { ExcercisePage } from './pages/ExcercisesPage';
 import { CodePage } from './pages/CodePage';
 import { TutorialPage } from './pages/TutorialPage'
+import { ToolsPage } from './pages/ToolsPage';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import { useEffect , useState} from 'react';
 import { NotFound } from './components/NotFound';
@@ -37,6 +38,8 @@ function App() {
         <Route path="/desafios" element={<ExcercisePage/>}/>
         <Route path="/code/:id" element={<CodePage/>}/>
         <Route path="/tutorial/:id" element={<TutorialPage/>}/>
+        <Route path="/herramientas/" element={<ToolsPage/>}/>
+        <Route path="/herramientas/:tool" element={<ToolsPage/>}/>
         <Route path="*" element={<NotFound/>}></Route>
       </Routes>
       <div className="mouseTracker" style={{top:mousePosition.y-mouseTrackerSize/2, left:mousePosition.x-mouseTrackerSize/2,height:mouseTrackerSize,width:mouseTrackerSize}}/>

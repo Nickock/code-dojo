@@ -1,0 +1,52 @@
+.tls-grid{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 1000px;
+    display: grid;
+    /* grid-template-columns: repeat(3,minmax(200px,1fr)); */
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px;
+}
+.tls-tool-card{
+    box-sizing: border-box;
+    background-color: var(--white-transparent);
+    padding: 10px;
+    border-radius: 10px;
+    grid-column: minmax(200px,span 1);
+    text-align: center;
+    transition-duration: 150ms;
+}
+.tls-tool-card:hover{
+    background-color: transparent;
+    transform: scale(1.1);
+    border:2px var(--white-transparent) solid
+}
+.tls-tool-card>a{
+    color: var(--light-yellow);
+    text-decoration: none;
+    display: block;    
+}
+
+.tls-graphVisualizer-container{
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.tls-graphVisualizer-options{
+    display: flex;
+    flex-direction: column;
+    background-color:var(--white-transparent);
+    border-radius: 15px;
+    width: 100%;
+    max-width: 300px;
+    padding: 50px;
+    gap: 10px;
+    font-size: 1.2em;
+}
