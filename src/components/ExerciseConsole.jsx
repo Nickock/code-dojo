@@ -24,8 +24,8 @@ export function ExerciseConsole({excerciseData,logs,isError}){
     }
     const handleSolutionClick = ()=>{
         setShowSolution(!showSolution);
-        console.log("Mostar solución : " , excerciseData.solution)
     }
+    
 return(
     <aside className={`sv-console ${colapsed?'sv-collapsed' : ''} ${isError?'sv-console-error' : ''}`}>
         <h2>Consola</h2>

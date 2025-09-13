@@ -53,9 +53,10 @@ const editorRef = useRef(null);
         <Editor
           defaultLanguage="javascript"
           defaultValue={initialCode}
-          // theme ="vs-dark"
           theme = {editorTheme}
-          height={'90%'}
+          // height={'90%'}
+          height={'680px'}
+          width={'100%'}
           onMount={handleEditorDidMount}
           />
         <button onClick={runCode} className={isRunningCode?"sv-disabled":""} >RUN CODE</button>

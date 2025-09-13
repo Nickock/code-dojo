@@ -125,8 +125,10 @@ body{
 }
 .headerToggler{
     position: absolute;
-    display: block;
-    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 15px;
     text-align: center;
     cursor: pointer;
     width: 40px;
@@ -137,7 +139,10 @@ body{
 
 .theme-toggler{
     position: fixed;
-    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 15px;
     right: 0px;
     width: 40px;
     height: 40px;

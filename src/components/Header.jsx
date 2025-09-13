@@ -24,7 +24,7 @@ export function Header(){
             <Link to="/">home_2</Link> */}
 
             <Link to="/">Home</Link>
-            <Link to="/desafios"><img src={logo} alt="code dojo logo, es amarillo, y con una forma abstracta" /></Link>
+            <Link to="/desafios"><img src={logo} alt="code dojo logo, un ninja estilo animado, vestido de negro con detalles en amarillo , porta una katana y se ve amigable"/></Link>
 
             <Link to="/desafios">Desafíos</Link>
             

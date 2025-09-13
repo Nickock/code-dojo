@@ -11,7 +11,9 @@ export const ParagraphType = {
     IMAGE : "image",
     IMAGE_LARGE : "image_large",
     CARD : "card",
-    SUBTITLE: "subtitle"
+    SUBTITLE: "subtitle",
+    LIST : "list",
+    ORD_LIST:"ordered_list",
 }
 
 
@@ -137,7 +139,7 @@ export const ExerciseData = [
 
     //EsDirigido?
     {
-        id:1,
+        id:"desafio_1",
         card:{
             title:"¿Es dirigido?",
             image :"src/assets/graphs/ex_img_5.png",
@@ -203,7 +205,7 @@ export const ExerciseData = [
     },
     //Recursión, repaso
     {
-        id:3,
+        id:"desafio_2",
         card:{
             title:"Recursión, repaso",
             image :"src/assets/graphs/ex_img_2.png",
@@ -277,7 +279,7 @@ export const ExerciseData = [
                 title: "Recorrida en profundidad",
                 description : [
                     [ParagraphType.SUBTITLE,'Intuición'],
-                    [ParagraphType.NORMAL , 'La recorrida en profundidad se basa en tomar una rama del grafo, explorarla lo máximo posible, y una vez no se pueda avanzar más por esa rama, tomar la siguiente rama sin explorar. Esto se repite hasta haber explorado todo el grafo, aunque para ser precisos, hasta haber explorado toda la componente conexa.'],
+                    [ParagraphType.NORMAL , 'La recorrida en profundidad se basa en tomar una rama del grafo, explorarla lo máximo posible, y una vez no se pueda avanzar más por esa rama, tomar la siguiente rama sin explorar. Esto se repite hasta explorar todo el grafo, aunque para ser precisos, hasta explorar toda la componente conexa.'],
                     [ParagraphType.NORMAL, 'Para ganar intuición sobre el algoritmo, supongamos que somos un viajante que se encuentra situado en un nodo cualquiera del grafo. Nuestro siguiente paso es decidir hacia qué nodo viajar. Dentro de nuestras posibilidades, tenemos únicamente aquellos nodos que son adyacentes al nodo en el que estamos situados. Una vez elegido el nodo destino, viajamos hasta él.'],
                     [ParagraphType.NORMAL, '¿Qué sigue? Pues elegir un nuevo nodo hacia el cual viajar, pero ¡ten cuidado! Si vuelves a elegir el mismo nodo desde el que partiste, podrías quedar atrapado en un bucle infinito, viajando desde el nodo inicial hasta otro nodo y viceversa. Entonces, ¿qué podemos hacer para evitar reelegir nodos ya visitados? ¡Fácil! Cada vez que visitemos un nodo, lo marcaremos como visitado. Así, a la hora de elegir un nuevo nodo para visitar, dentro de las posibilidades, solo tomaremos en cuenta aquellas que aún no fueron visitadas.'],
                     [ParagraphType.NORMAL , 'Para el algoritmo, nos serviremos de una lista auxiliar a la que llamaremos explorado. Inicialmente, definiremos explorado[v] = false para todo nodo v del grafo, y actualizaremos a explorado[v] = true cuando exploremos el nodo v.'],
@@ -365,7 +367,7 @@ export const ExerciseData = [
                     [ParagraphType.CARD , ' Detección de ciclos (DFS)', 'Permite encontrar posibles referencias circulares. Por ejemplo : Paquete A → depende de B → depende de C → depende de A. ¡Ciclo detectado!'],
                     [ParagraphType.CARD , 'Sugerencia de amistades (BFS)', 'Si modelamos las relaciones de amistad de una red social con un grafo, podríamos sugerir nuevas amistades en función de la distancia entre amigos'],
                     [ParagraphType.CARD , 'Solucionador sudoku (DFS)', 'Podríamos colocar un numero i en una celda j del sudoku , e interpretar un arbol de una posible solución que contiene ese numero i en la celda j, y descartar el árbol completo si encontramos una contradicción'],
-                    [ParagraphType.CARD , 'Rastreo epidemiológico (BFS)', 'Nivel 0: Paciente cero , Nivel 1 : Riesgo alto , Nivel 2 : Riesgo intermedio ... y con esto poder localizar y asilar focos potenciales antes que se dispersen, sin necesidad de aislar a todos'],
+                    [ParagraphType.CARD , 'Rastreo epidemiológico (BFS)', 'Nivel 0: Paciente cero , Nivel 1 : Riesgo alto , Nivel 2 : Riesgo intermedio ... y con esto poder localizar y aislar focos potenciales antes que se dispersen, sin necesidad de aislar a todos'],
                     [ParagraphType.CARD , 'Parsing de código (DFS)', 'Supongamos que tenemos lo siguiente "<div><p><span>Hello world!</span></p></div>" , DFS podría procesar div → p → span → "Hello world!" '],
                     [ParagraphType.NORMAL, 'En muchos casos ni siquiera es necesario implementar un grafo directamente, sino que la propia estructura del problema puede ser vista como un grafo con un poco de ingenio.'],
                 ],
@@ -402,7 +404,7 @@ export const ExerciseData = [
 
     //EsConexo?
     {
-        id:2,
+        id:"desafio_3",
         card:{
             title:"¿Es conexo?",
             image :"src/assets/graphs/ex_img_4.png",
@@ -464,18 +466,70 @@ export const ExerciseData = [
     
 
     {
-        id:4,
+        id:"desafio_4",
         card:{
-            title:"Recorrida DFS (recursiva)",
+            title:"Electrify",
             image :"src/assets/graphs/ex_img_1.png",
-            dificulty:"easy",
-            catgory : ExerciseCategory.GRAPHS
+            dificulty:"medium",
+            catgory : ExerciseCategory.GRAPHS,
+            description:[
+                [ParagraphType.NORMAL,'La empresa Electrfy está expandiendo su cobertura eléctrica a zonas rurales. El departamento de planeación ha entregado un reporte con:'],
+                [ParagraphType.LIST,[
+                    'Puntos de instalación: Ubicaciones aprobadas para torres eléctricas',
+                    'Conexiones viables: Estudio técnico de conexiones posibles entre torres',
+                    'Expansión a futuro: Ubicaciones de torres eléctricas y conexiones viables para una expansión futura de la red',
+                ]],
+                [ParagraphType.NORMAL,'En la revisión del plan, se sospecha que existen conexiones redundantes. Estas conexiones aumentan el costo de instalación sin beneficio real, pueden crear problemas de estabilidad en la red y complican el mantenimiento y la detección de fallas.'],
+                [ParagraphType.NORMAL,'Debes analizar e identificar estas conexiones redundantes, indicando qué torres están involucradas en cada conexión redundante del plan (si existen).'],
+                [ParagraphType.NORMAL,'Requisitos:'],
+                [ParagraphType.ORD_LIST , [
+                    'La lista de conexiones redundantes debe estar ordenada por cantidad de torres (menor a mayor)',
+                    'Dentro de cada conexión redundante, las torres deben estar ordenadas por número (menor a mayor)',
+                ]],
+                
+                [ParagraphType.CODE_EXAMPLE,[
+                    //linea, index
+                    ['//Ejemplo',0],
+                    ['const plan = [',0],
+                    ['[1],',1],
+                    ['[2],',1],
+                    ['[0,3],',1],
+                    ['[],',1],
+                    ['[5]',1],
+                    ['[4]',1],
+                    ['];',0],
+                    ['',0],
+                    ['// ✅ Resultado correcto:',0],
+                    ['// [[4, 5], [0, 1, 2]]',0],
+                    ['//❌ [[0, 1, 2], [4, 5]]',0],
+                    ['//(orden incorrecto por tamaño)',0],
+                    ['//❌ [[5, 4],[0, 1, 2]]',0],
+                    ['//(orden incorrecto dentro de una conexión)',0],
+                ]],
+            ]
         },
-        data:{}
+        data:{
+            signature : "buscaCiclo",
+            initialCode : "function buscaCiclo(G){\n//Tu codigo aquí\n\n return [];\n}",
+            arguments : ["G"],
+            tests : [
+                {arguments : {"a":3 },result :true},
+                {arguments : {"a":4},result :true},
+                ],
+            hints : [
+                'Tanto DFS como BFS generan un array "Explorados"',
+                '¿Qué significa que intentemos explorar un nodo ya explorado?',
+                ],
+            solution : [
+                //['lineaCoridgo', numeroIndent]
+                ["linea codigo solucion del ejercicio",0],
+                ["linea codigo solucion del ejercicio",0],
+            ]
+        }
     },
 
     {
-        id:5,
+        id:"desafio_5",
         card:{
             title:"Recorrida BFS (iterativa)",
             image :"src/assets/graphs/ex_img_1.png",

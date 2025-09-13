@@ -137,10 +137,15 @@
     /* padding: 20px; */
     gap: 10px;
     flex-direction: row;
-    height: 80vh;
-
-
+    /* height: 80vh; */
 }
+.sv-description,
+.sv-editor,
+.sv-console{
+    max-height: 85vh;
+    min-height: 70vh;
+}
+
 @media (width<800px) {
     .sv-container{
         flex-direction: column;
@@ -316,6 +321,7 @@
     width: 80%;
     margin: 20px auto;
     cursor: pointer;
+    user-select: none;
 }
 .sv-console-hint:hover{
     /* border-color: var(--blue); */
@@ -406,7 +412,7 @@
     padding: 10px;
     font-weight: bolder;
     cursor: pointer;
-    transition-duration: 150ms;
+    /* transition-duration: 150ms; */
     transition-property: background-color,color;
     display: flex;
     flex-direction: column;
